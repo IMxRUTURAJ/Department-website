@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="navbar">
+    <a href="#" class="d-head">Computer Department</a>
+    <span class="nav">
+      <a href="index.html">Home</a>
+      <a href="login.html">Login</a>
+      <a href="#">Gallery</a>
+      <a href="result.html">Result</a>
+    </span>
+
+  </div>
+   <div class="l-heading">
+    <h2>Student and Teacher Login</h2>
+   </div>
+     <div class="l-button">
+      <button id="studentButton" >Student</button>
+      <button id="teacherButton">Teacher</button>
+     </div>
+     <div class="login">
+    <div id="studentLogin" class="s-login">
+        <h3>Student Login</h3>
+        <div class="l-content">
+        <form>
+          <div> <label class="" for="student-prn">PRN Number:</label></div>
+          <div><input class="" type="text" id="student-prn" placeholder="Enter your PRN number" required></div>
+          <button class="" type="submit">Log In</button>
+        </form>
+      </div>
+    </div>
+    </div>
+    <div class="t-login">
+    <div id="teacherLogin" class=" s-login hidden">
+        <h3 class="">Teacher Login</h3>
+        <div class="l-content">
+        <form>
+         <label for="teacher-email">Email:</label>
+          <div><input  type="email" id="teacher-email" placeholder="Enter your email" required></div>
+         <label  for="teacher-password">Password:</label> 
+        <div> <input type="password" id="teacher-password" placeholder="Enter your password" required></div> 
+          <button type="submit">Log In</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  <script>
+    const studentButton = document.getElementById('studentButton');
+    const teacherButton = document.getElementById('teacherButton');
+    const studentLogin = document.getElementById('studentLogin');
+    const teacherLogin = document.getElementById('teacherLogin');
+
+    studentButton.addEventListener('click', () => {
+      studentLogin.classList.remove('hidden');
+      teacherLogin.classList.add('hidden');
+    });
+
+    teacherButton.addEventListener('click', () => {
+      teacherLogin.classList.remove('hidden');
+      studentLogin.classList.add('hidden');
+    });
+  </script>
+</body>
+</html>

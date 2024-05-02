@@ -1,2 +1,2 @@
-# ENTC
-ENTC department website
+# COMPUTER 
+Computer department website
